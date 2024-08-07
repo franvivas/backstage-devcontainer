@@ -1,0 +1,12 @@
+# Backstage override configuration for your local development environment
+backend:
+  database:
+    # client: better-sqlite3
+    # connection: ':memory:'
+    client: pg
+    connection:
+      host: ${POSTGRES_HOST}
+      port: ${POSTGRES_PORT}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+  # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
